@@ -23,15 +23,21 @@ uint8 return_switch              # return to launch 2 position switch (mandatory
 uint8 loiter_switch              # loiter 2 position switch (optional): _MISSION_, LOITER
 uint8 offboard_switch            # offboard 2 position switch (optional): _NORMAL_, OFFBOARD
 uint8 kill_switch                # throttle kill: _NORMAL_, KILL
-uint8 termination_switch         # trigger termination which cannot be undone
 uint8 gear_switch                # landing gear switch: _DOWN_, UP
 uint8 transition_switch          # VTOL transition switch: _HOVER, FORWARD_FLIGHT
+uint8 gpio_switch		 # Control GPIO output on FMU pin 8: _LOW_, HIGH
+uint8 kill_switch_2		 # throttle kill: _NORMAL_, KILL ~ works in conjuction of kill_switch
+uint8 cp_switch			 # switch to turn on or turn off collision prevention: _ON, OFF
 
 uint8 photo_switch               # Photo trigger switch
 uint8 video_switch               # Photo trigger switch
 
+uint8 payload_power_switch       # Payload power switch
+
 uint8 engage_main_motor_switch   # Engage the main motor (for helicopters)
 
-uint8 payload_power_switch       # Payload power switch
+uint8 externalmode_switch	# External mode switch
+uint8 servo_switch		# switch to turn on or turn off servo control: _ON, OFF
+
 
 uint32 switch_changes            # number of switch changes
